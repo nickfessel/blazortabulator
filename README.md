@@ -1,1 +1,1 @@
-# blazortabulator
+# BlazorTabulator
