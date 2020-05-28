@@ -1,0 +1,26 @@
+﻿<div @ref="elem" class="table-dark table-striped table-bordered" id="tabulatorTable">
+    TODO: tell tabulator.js to draw a table into this element.
+</div>
+@inject Microsoft.JSInterop.IJSRuntime JS
+
+@* Pass 'this' instance as a cascading parameter to descendants in tree *@
+<CascadingValue Value="@this">
+    @ChildContent
+</CascadingValue>
+
+@code {
+    ElementReference elem;
+
+    [Parameter] public TabulatorData tableData { get; set; }
+  //  [Parameter] public List<TabulatorColumn> tableColumns { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeAsync<string>("blazortabulator.createTable", new object[] { elem, tableData.Columns });
+        }
+
+        await JS.InvokeAsync<string>("blazortabulator.updateTable", new object[] { elem, tableData });
+    }
+}

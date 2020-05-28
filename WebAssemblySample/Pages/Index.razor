@@ -1,0 +1,19 @@
+﻿@page "/"
+
+    <BlazorTabulator.Tabulator tableData="@sampleData">
+        <BlazorTabulator.Data.TabulatorColumnData field="name" title="Name"></BlazorTabulator.Data.TabulatorColumnData>
+    </BlazorTabulator.Tabulator>
+
+@code {
+  
+    private TabulatorData sampleData = new TabulatorData()
+    {
+        // This could be an API call instead of hardcoded values.
+        // Also, need to do List<Object>, not List<Person>();
+        People = new List<Person>() {
+            new Person() { Name = "Nick" },
+            new Person() {  Name = "Joe" }
+        }
+    };
+}
+
