@@ -1,6 +1,5 @@
 ﻿var blazortabulator = {
     createTable: function (elem, tableColumns) {
-       // alert(JSON.stringify(tableColumns));
        var table = new Tabulator(elem, {
            height: "311px",
            columns: tableColumns,
