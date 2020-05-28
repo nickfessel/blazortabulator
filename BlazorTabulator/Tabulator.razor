@@ -10,10 +10,9 @@
 
 @code {
     ElementReference elem;
-
     [Parameter] public TabulatorData tableData { get; set; }
-  //  [Parameter] public List<TabulatorColumn> tableColumns { get; set; }
     [Parameter] public RenderFragment ChildContent { get; set; }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
