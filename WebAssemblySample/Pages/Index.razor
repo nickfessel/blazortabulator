@@ -1,7 +1,8 @@
 ﻿@page "/"
 
     <BlazorTabulator.Tabulator tableData="@sampleData">
-        <BlazorTabulator.Data.TabulatorColumnData field="name" title="Name"></BlazorTabulator.Data.TabulatorColumnData>
+        <BlazorTabulator.Data.TabulatorColumnData field="scientificName" title="Scientific Name"></BlazorTabulator.Data.TabulatorColumnData>
+        <BlazorTabulator.Data.TabulatorColumnData field="commonName" title="Common Name"></BlazorTabulator.Data.TabulatorColumnData>
     </BlazorTabulator.Tabulator>
 
 @code {
@@ -9,9 +10,9 @@
     private TabulatorData sampleData = new TabulatorData()
     {
         // This could be an API call instead of hardcoded values.
-        Dataset = new List<Person>() {
-            new Person() { Name = "Nick" },
-            new Person() {  Name = "Joe" }
+        Dataset = new List<JumpingSpider>() {
+            new JumpingSpider() { ScientificName = "Anasaitis canosa", CommonName = "Twin Flag Jumping Spider" },
+            new JumpingSpider() {  ScientificName = "Phidippus regius", CommonName = "Regal Jumping Spider" }
         }
     };
 }
