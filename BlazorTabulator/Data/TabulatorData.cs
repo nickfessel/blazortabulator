@@ -5,7 +5,7 @@ namespace BlazorTabulator.Data
 {
     public class TabulatorData
     {
-        public IEnumerable<Person> People { get; set; }
+        public IEnumerable<Object> Dataset { get; set; }
         public List<TabulatorColumn> Columns { get; set; } = new List<TabulatorColumn>();
         public TabulatorData()
         {
