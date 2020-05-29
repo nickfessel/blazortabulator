@@ -6,4 +6,4 @@ The included WebAssemblySample project provides a Blazor Webassembly application
 
 The goal for this project is to provide a rich experience to allow developers to generate beautiful, functional tables using C# with idiomatic Razor syntax.
 
-![blazortabulatorscreenshot](https://raw.githubusercontent.com/NickFessel/blazortabulator/master/blazortabulatorscreenshot.png)
+![blazortabulatorscreenshot](https://raw.githubusercontent.com/NickFessel/blazortabulator/master/blazortabulatorscreenshot2.png)
