@@ -5,3 +5,5 @@ This project is a C# Razor class library (https://docs.microsoft.com/en-us/aspne
 The included WebAssemblySample project provides a Blazor Webassembly application that consumes the BlazorTabulator Razor class library.
 
 The goal for this project is to provide a rich experience to allow developers to generate beautiful, functional tables using C# with idiomatic Razor syntax.
+
+![blazortabulatorscreenshot](https://raw.githubusercontent.com/NickFessel/blazortabulator/master/blazortabulatorscreenshot.png)
