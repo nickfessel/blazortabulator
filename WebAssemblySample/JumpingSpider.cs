@@ -5,6 +5,7 @@ namespace WebAssemblySample
     {
         public string ScientificName { get; set; }
         public string CommonName { get; set; }
+        public Image Image { get; set; }
 
         public JumpingSpider()
         {

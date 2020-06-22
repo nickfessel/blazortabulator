@@ -9,6 +9,7 @@ namespace BlazorTabulator.Data
 
         [Parameter] public string Title { get; set; }
         [Parameter] public string Field { get; set; }
+        [Parameter] public string CellClick { get; set; }
 
         private  readonly TabulatorColumn col = new TabulatorColumn();
 
@@ -21,6 +22,7 @@ namespace BlazorTabulator.Data
         {
             col.field = Field;
             col.title = Title;
+            col.cellClick = CellClick;
         }
 
         [CascadingParameter] public Tabulator OwnerTabulator { get; set; }

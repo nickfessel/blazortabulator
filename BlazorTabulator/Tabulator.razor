@@ -17,7 +17,7 @@
     {
         if (firstRender)
         {
-            await JS.InvokeAsync<string>("blazortabulator.createTable", new object[] { elem, tableData.Columns });
+            await JS.InvokeAsync<string>("blazortabulator.createTable", new object[] { elem, tableData, tableData.Columns });
         }
 
         await JS.InvokeAsync<string>("blazortabulator.updateTable", new object[] { elem, tableData });

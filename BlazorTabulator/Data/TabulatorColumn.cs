@@ -5,6 +5,8 @@ namespace BlazorTabulator.Data
     {
         public string field { get; set; }
         public string title { get; set; }
+        public string cellClick { get; set; }
+
         public TabulatorColumn()
         {
     
