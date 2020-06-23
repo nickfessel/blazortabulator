@@ -1,6 +1,5 @@
 ﻿var blazortabulator = {
     createTable: function (elem, tableData, tableColumns, tableID) {
-        alert(tableID);
         tableColumns.forEach((c, index) => {
             if (c.field === "image.url") {
                        
@@ -21,7 +20,6 @@
         var tabulatorTable = Tabulator.prototype.findTable("#" + tableID)[0];
      },
     updateTable: function (elem, tableData, tableID) {
-        alert(tableID);
        var tabulatorTable = Tabulator.prototype.findTable("#" + tableID)[0];
         tableData.dataset.forEach((t) => { tabulatorTable.addRow(t) });
         tabulatorTable.redraw(true);
