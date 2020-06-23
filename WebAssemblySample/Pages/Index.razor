@@ -1,10 +1,14 @@
 ﻿@page "/"
 
-    <BlazorTabulator.Tabulator tableData="@sampleData">
+    <BlazorTabulator.Tabulator tableData="@sampleData" tableID="tabulator1" >
         <BlazorTabulator.Data.TabulatorColumnData field="scientificName" title="Scientific Name" cellClick=""></BlazorTabulator.Data.TabulatorColumnData>
         <BlazorTabulator.Data.TabulatorColumnData field="commonName" title="Common Name" cellClick=""></BlazorTabulator.Data.TabulatorColumnData>
         <BlazorTabulator.Data.TabulatorColumnData field="image.name" title="Image Name" cellClick=""></BlazorTabulator.Data.TabulatorColumnData>
-        <BlazorTabulator.Data.TabulatorColumnData field="image.url" title="Image" cellClick = "eval(function(e,cell) {window.open('https://en.wikipedia.org/wiki/Anasaitis_canosa#/media/File:Hill_Anasaitis_canosa_female_01.jpg', '_blank');})"></BlazorTabulator.Data.TabulatorColumnData>
+        <BlazorTabulator.Data.TabulatorColumnData field="image.url" title="Image"></BlazorTabulator.Data.TabulatorColumnData>
+    </BlazorTabulator.Tabulator>
+
+    <BlazorTabulator.Tabulator tableData="@sampleFishLogData" tableID="tabulator2">
+        <BlazorTabulator.Data.TabulatorColumnData Field="eventDateTime" Title="Date/Time"></BlazorTabulator.Data.TabulatorColumnData>
     </BlazorTabulator.Tabulator>
 
 @code {
@@ -15,6 +19,12 @@
             new JumpingSpider() { ScientificName = "Anasaitis canosa", CommonName = "Twin-Flagged Jumping Spider", Image = new Image() { Name = "twin-flagged jumper image", Url = "https://upload.wikimedia.org/wikipedia/commons/d/da/Hill_Anasaitis_canosa_female_01.jpg", Height=100, Width=100 } },
             new JumpingSpider() {  ScientificName = "Phidippus regius", CommonName = "Regal Jumping Spider", Image = new Image() { Name = "regal jumper image", Url = "https://upload.wikimedia.org/wikipedia/commons/3/3a/Phidippus_regius_4351.jpg", Width=100, Height=100 } }
         }
+    };
+
+    private TabulatorData sampleFishLogData = new TabulatorData()
+    {
+        Dataset = new List<FishLog>() { new FishLog() { EventDateTime = DateTime.Now }
+    }
     };
 }
 

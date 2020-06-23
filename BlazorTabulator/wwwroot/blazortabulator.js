@@ -1,7 +1,9 @@
 ﻿var blazortabulator = {
-    createTable: function (elem, tableData, tableColumns) {
+    createTable: function (elem, tableData, tableColumns, tableID) {
+        alert(tableID);
         tableColumns.forEach((c, index) => {
-                    if (c.field === "image.url") {
+            if (c.field === "image.url") {
+                       
                         c.cellClick = (e, cell) => {
                             window.open(cell.getRow().getData().image.url);
                         };
@@ -16,10 +18,11 @@
            layout: "fitDataFill",
            columns: tableColumns,
        });
-        var tabulatorTable = Tabulator.prototype.findTable("#tabulatorTable")[0];
+        var tabulatorTable = Tabulator.prototype.findTable("#" + tableID)[0];
      },
-    updateTable: function (elem, tableData) {
-       var tabulatorTable = Tabulator.prototype.findTable("#tabulatorTable")[0];
+    updateTable: function (elem, tableData, tableID) {
+        alert(tableID);
+       var tabulatorTable = Tabulator.prototype.findTable("#" + tableID)[0];
         tableData.dataset.forEach((t) => { tabulatorTable.addRow(t) });
         tabulatorTable.redraw(true);
     }
