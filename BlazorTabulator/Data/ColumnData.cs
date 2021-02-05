@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace BlazorTabulator.Data
 {
-    public class TabulatorColumnData: ComponentBase, IDisposable
+    public class ColumnData: ComponentBase, IDisposable
     {
         private bool disposedValue;
 
@@ -12,9 +12,9 @@ namespace BlazorTabulator.Data
         [Parameter] public string CellClick { get; set; }
         [Parameter] public string Editor { get; set; }
 
-        private  readonly TabulatorColumn col = new TabulatorColumn();
+        private  readonly Column col = new Column();
 
-        public TabulatorColumnData()
+        public ColumnData()
         {
 
         }

@@ -1,15 +1,15 @@
 ﻿@page "/"
 
     <BlazorTabulator.Tabulator tableData="@sampleData" tableID="tabulator1" >
-        <BlazorTabulator.Data.TabulatorColumnData field="scientificName" title="Scientific Name" cellClick=""></BlazorTabulator.Data.TabulatorColumnData>
-        <BlazorTabulator.Data.TabulatorColumnData field="commonName" title="Common Name" cellClick=""></BlazorTabulator.Data.TabulatorColumnData>
-        <BlazorTabulator.Data.TabulatorColumnData field="image.name" title="Image Name" cellClick=""></BlazorTabulator.Data.TabulatorColumnData>
-        <BlazorTabulator.Data.TabulatorColumnData field="image.url" title="Image"></BlazorTabulator.Data.TabulatorColumnData>
+        <BlazorTabulator.Data.ColumnData field="scientificName" title="Scientific Name" cellClick=""></BlazorTabulator.Data.ColumnData>
+        <BlazorTabulator.Data.ColumnData field="commonName" title="Common Name" cellClick=""></BlazorTabulator.Data.ColumnData>
+        <BlazorTabulator.Data.ColumnData field="image.name" title="Image Name" cellClick=""></BlazorTabulator.Data.ColumnData>
+        <BlazorTabulator.Data.ColumnData field="image.url" title="Image"></BlazorTabulator.Data.ColumnData>
     </BlazorTabulator.Tabulator>
     <br /><br /><br />
     <BlazorTabulator.Tabulator tableData="@sampleFishLogData" tableID="tabulator2">
-        <BlazorTabulator.Data.TabulatorColumnData Field="eventDateTime" Title="Date/Time"></BlazorTabulator.Data.TabulatorColumnData>
-        <BlazorTabulator.Data.TabulatorColumnData Field="gpsData" Title="GPS"></BlazorTabulator.Data.TabulatorColumnData>
+        <BlazorTabulator.Data.ColumnData Field="eventDateTime" Title="Date/Time"></BlazorTabulator.Data.ColumnData>
+        <BlazorTabulator.Data.ColumnData Field="gpsData" Title="GPS"></BlazorTabulator.Data.ColumnData>
     </BlazorTabulator.Tabulator>
 
 @code {
