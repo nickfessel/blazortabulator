@@ -10,7 +10,7 @@ namespace BlazorTabulator.Data
 
         public Column()
         {
-    // test
+    // test2
 
         }
     }
